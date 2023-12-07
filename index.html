@@ -1,0 +1,96 @@
+<!doctype html>
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Template Website</title>
+        <meta name="description" content="Template Website">
+
+        <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon">
+        <link rel="stylesheet" href="css/base.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    </head>
+
+    <body>
+        <header>
+            <div class="header-menu-burger-button" onclick="toggleMenu(); burgerIcon(this);">
+                <div class="header-menu-burger-icon">
+                    <div class="bar1"></div>
+                    <div class="bar2"></div>
+                    <div class="bar3"></div>
+                </div>
+            </div>
+            <nav class="menu" id="main-menu">
+                <a href="index.html" class="current"><i class="fa fa-home"></i> Home <i class="fa fa-home"></i></a>
+                <a href="page.html"><i class="fa fa-square"></i> Page <i class="fa fa-square"></i></a>
+                <a href="#contact-section"><i class="fa fa-phone"></i> Contact <i class="fa fa-phone"></i></a>
+            </nav>
+            <a href="index.html"><img class="logo" src="assets/images/logo.png" alt="Logo.png"></a>
+            <h2>Index</h2>
+        </header>
+
+        <i class="fa fa-list" id="aside-show" onclick="sideMenu()"></i>
+        <aside id="aside">
+            <i class="fa fa-close right" id="aside-hide" onclick="sideMenu()"></i>
+            <h2>&nbsp;Aside</h2>
+        </aside>
+
+        <section class="grid" id="main-section">
+            <div class="col-1"><p>TESTING 1</p></div>
+            <div class="col-2"><p>TESTING 2</p></div>
+            <div class="col-2"><p>TESTING 2</p></div>
+            <div class="col-3"><p>TESTING 3</p></div>
+            <div class="col-3"><p>TESTING 3</p></div>
+            <div class="col-3"><p>TESTING 3</p></div>
+            <div class="col-2"><p>TESTING 2</p></div>
+            <div class="col-4"><p>TESTING 4</p></div>
+            <div class="col-4"><p>TESTING 4</p></div>
+            <div class="col-5"><p>TESTING 5</p></div>
+            <div class="col-5"><p>TESTING 5</p></div>
+            <div class="col-5"><p>TESTING 5</p></div>
+            <div class="col-5"><p>TESTING 5</p></div>
+            <div class="col-5"><p>TESTING 5</p></div>
+        </section>
+
+        <section class="new-row contact grid" id="contact-section">
+            <h2>Contact</h2><br>
+            <div class="col-4">
+                <a target="_blank" href="mailto:example@email.com">
+                    <i class="fa fa-envelope-o icons"></i>
+                    <h3>Email</h3>
+                    <p>example@email.com</p>
+                </a>
+            </div>
+            <div class="col-4">
+                <a target="_blank" href="https://www.facebook.com">
+                    <i class="fa fa-facebook icons"></i>
+                    <h3>Social Media</h3>
+                    <p>@username</p>
+                </a>
+            </div>
+            <div class="col-4">
+                <i class="fa fa-phone icons"></i>
+                <h3>Phone</h3>
+                <p>01234 567 890</p>
+            </div>
+            <div class="col-4">
+                <a target="_blank" href="https://www.google.com/maps/">
+                    <i class="fa fa-map-o icons"></i>
+                    <h3>John Smith</h3>
+                    <p>123 Street,<br>
+                    AB1 2CD, UK</p>
+                </a>
+            </div>
+        </section>
+
+        <footer>
+            <p>&copy; Project/Company Name & Details&trade;</p>
+            <a class="top-button" href="#top"><i class="fa fa-arrow-up" id="page-top"></i></a>
+        </footer>
+
+        <link rel="stylesheet" href="css/stylesheet.css">
+        <script src="js/script.js"></script>
+    </body>
+</html>

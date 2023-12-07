@@ -1,0 +1,281 @@
+/* Setup Page Infrastructure (Base Layer) */
+
+:root {
+    --headerHeight: 85px !important;
+    --footerHeight: 45px !important;
+}
+
+@media screen and (max-width: 550px) {
+    :root {
+        --headerHeight: 50px !important;
+    }
+    
+    [class^="col-"] {
+        width: 100% !important;
+    }
+
+    .header-menu-burger-button {
+        top: -5px !important;
+        left: -2px !important;
+        height: 52px !important;
+    }
+
+    aside {
+        bottom: 0 !important;
+    }
+
+    footer {
+        display: none !important;
+    }
+
+    .contact {
+        height:1000px !important;
+        text-align: center !important;
+    }
+
+    header h2 {
+        margin-top: 10px !important;
+    }
+}
+
+@media screen and (max-height: 450px) {
+    aside {
+        display: none !important;
+    }
+    
+    footer {
+        display: none !important;
+    }
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0px;
+    padding-top: var(--headerHeight);
+}
+
+header {
+    width: 100%;
+    height: var(--headerHeight);
+    position: fixed;
+    top: 0px;
+    text-align: center;
+    font-size: 22px;
+    background-color: rgba(0, 0, 10, 0.7);
+}
+
+header h2 {
+    font-size: 25px;
+}
+
+header a img.logo {
+    position: fixed;
+    width: auto;
+    height: var(--headerHeight);
+    top: 0px;
+    right: 0px;
+}
+
+header .menu {
+    width: 200px;
+    height: 0px;
+    position: fixed;
+    top: var(--headerHeight);
+    overflow: hidden;
+    font-size: large;
+    transition: all 0.4s ease;
+}
+
+header .menu a {
+    width: 120px;
+    color: rgba(255, 255, 255, 0.4);
+    background-color: rgba(0, 0, 10, 0.7);
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    transition: all 0.3s ease;
+    display: block;
+}
+
+header .menu a:hover {
+    background-color: rgb(0, 11, 97);
+    color: rgb(179, 143, 0);
+    padding-left: 24px;
+    cursor: pointer;
+}
+
+header .menu a.current {
+    background-color: rgb(0, 11, 97);
+    color: rgb(255, 255, 255);
+    padding-left: 16px;
+}
+
+.header-menu-burger-button {
+    position: fixed;
+    z-index: 98;
+    top: 15px;
+    left: 15px;
+    width: 61px;
+    height: 61px;
+    border-radius: 20px;
+    background-color: rgba(0, 0, 10, 0.7);
+    cursor: pointer;
+}
+
+.header-menu-burger-icon {
+    margin-top: 6px;
+    display: inline-block;
+}
+
+.header-menu-burger-icon .bar1,
+.header-menu-burger-icon .bar2,
+.header-menu-burger-icon .bar3 {
+    width: 35px;
+    height: 3px;
+    background-color: rgb(179, 143, 0);;
+    margin: 9px 13px;
+    transition: 0.4s;
+}
+
+.header-menu-burger-button.transform .bar1 {
+    transform: translate(0, 11px) rotate(-45deg);
+}
+
+.header-menu-burger-button.transform .bar2 {
+    opacity: 0;
+}
+
+.header-menu-burger-button.transform .bar3 {
+    transform: translate(0, -13px) rotate(45deg);
+}
+
+aside {
+    width: 10%;
+    min-width: 170px;
+    position: fixed;
+    top: var(--headerHeight);
+    bottom: var(--footerHeight);
+    right: 0px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    word-wrap: break-word;
+    transition: all 0.3s ease;
+    background-color: rgba(0, 0, 10, 0.7);
+    display: block;
+}
+
+aside h2 {
+    font-size: 16px;
+}
+
+[id^="aside-"] {
+    margin-top: 5px;
+    padding-bottom: 2px;
+}
+
+#aside-show {
+    padding: 5px;
+    position: fixed;
+    right: 15px;
+    font-size: 22px;
+    display: none;
+    border: 2px solid rgb(179, 143, 0);
+    border-radius: 50%;
+    cursor: pointer;
+    transform: rotateY(-180deg);
+    -ms-transform: rotateY(-180deg);
+    -webkit-transform: rotateY(-180deg);
+}
+
+#aside-hide {
+    margin-right: 15px;
+    font-size: 24px;
+    border: 2px solid rgb(179, 143, 0);
+    cursor: pointer;
+}
+
+footer {
+    width: 100%;
+    height: var(--footerHeight);
+    position: fixed;
+    bottom: 0px;
+    overflow: hidden;
+    color: rgb(255, 255, 255);
+    font-size: 14px;
+    text-align: center;
+    background-color: rgba(0, 0, 10, 0.7);
+}
+
+footer .top-button {
+    width: 60px;
+    height: 60px;
+    position: fixed;
+    bottom: 0px;
+    right: 0px;
+    font-size: 35px;
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    background-color: rgba(0, 0, 10, 1);
+    cursor: pointer;
+}
+
+footer #page-top {
+    padding: 15px;
+}
+
+section.contact {
+    height: 350px;
+    padding-top: 50px;
+    padding-bottom: var(--footerHeight);
+    padding-left: 10%;
+    padding-right: 10%;
+    background-color: rgb(24, 24, 24);
+}
+
+section.contact h3 {
+    font-size: 24px;
+}
+
+section.contact p {
+    font-size: 18px;
+}
+
+section.contact a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.grid {
+    margin-left: 15%;
+    margin-right: 15%;
+}
+
+[class^="col-"] {
+    float: left;
+    word-wrap: break-word;
+}
+
+[class^="col-"] * {
+    margin: 5px;
+}
+
+.new-row {
+    clear: both;
+}
+
+.left {
+    float: left;
+}
+
+.right {
+    float: right;
+}
+
+.icons {
+    margin-top: 10px;
+    padding-top: 10px;
+    font-size: 40px !important;
+}
